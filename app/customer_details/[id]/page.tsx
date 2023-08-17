@@ -65,7 +65,7 @@ const Form: React.FC = () => {
 
     try {
       await axios
-        .post('https://easyops.onrender.com/api/users', formData)
+        .put(`https://easyops.onrender.com/api/users/${params.id}`, formData)
         .then((res) => {
           console.log(res.data.users)
           router.push('/')
